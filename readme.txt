@@ -29,4 +29,4 @@ FLUJO CUBIERTO
 Login standard_user/secret_sauce -> agregar 2 productos -> ver carrito ->
 formulario de compra -> finalizar -> confirmacion "THANK YOU FOR YOUR ORDER".
 
-TESTET: BASILIO SALDARRIAGA GIRALDO
+TESTER: BASILIO SALDARRIAGA GIRALDO
