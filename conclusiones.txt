@@ -1,0 +1,29 @@
+CONCLUSIONES - EJERCICIO 1 (SauceDemo E2E)
+
+1. Alcance
+   Se automatizo el flujo completo de compra: login, agregar dos productos
+   (Sauce Labs Backpack y Sauce Labs Bike Light), revision del carrito,
+   formulario de checkout, resumen y confirmacion final.
+
+2. Decisiones tecnicas
+   - Playwright + TypeScript con patron Page Object Model para separar
+     la logica de pagina del escenario.
+   - Selectores estables basados en atributos data-test del sitio, no en
+     CSS ni XPath fragiles.
+   - Cada accion clave lleva una asercion (URL, badge del carrito, items del
+     carrito, mensaje final), de modo que el test falla en el paso exacto.
+   - test.step() para que el reporte HTML muestre el flujo por etapas.
+
+3. Hallazgos
+   - El mensaje "THANK YOU FOR YOUR ORDER" se ve en mayusculas por CSS
+     (text-transform: uppercase); el texto real del DOM es "Thank you for your
+     order!". Por eso la asercion es insensible a mayusculas/minusculas.
+   - El sitio es un entorno de practica y los datos del formulario no se
+     validan contra ningun backend, por lo que no se persiste ninguna orden.
+
+4. Posibles mejoras
+   - Agregar casos negativos (login invalido, formulario incompleto).
+   - Ejecutar en Firefox y WebKit y integrar en un pipeline de CI.
+   - Parametrizar productos y datos de checkout.
+
+(Completar con el resultado real de la ejecucion: tiempo total y estado.)

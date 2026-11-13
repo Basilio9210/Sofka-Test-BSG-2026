@@ -1,0 +1,15 @@
+{
+  "name": "saucedemo-e2e-playwright",
+  "version": "1.0.0",
+  "description": "Prueba E2E del flujo de compra en saucedemo.com con Playwright + TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
